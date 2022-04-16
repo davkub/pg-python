@@ -32,8 +32,27 @@ def calculate_year(user_age):
     
     return year_hundred
 
+# Extra
+def print_again(name, year):
+    while True:
+        reprint = input("How many times shall I re-print the results?\n0-X times: ")
+        if reprint.strip():
+            reprint = int(reprint)
+            if reprint == 0:
+                print("Alright, goodbye!")
+                break
+            elif reprint > 10:
+                print("I'm not going to print it THAT many times. Bye!")
+                break
+            else:
+                for _ in range(reprint):
+                    print(f"Dear {name}, year {year} will be the year you turn 100.\n")
+                    break
+
 def print_result(name, year):
-    print(f"Dear {name}, year {year} will be the year you turn 100.")
+    print(f"Dear {name}, year {year} will be the year you turn 100.\n...")
+    print_again(name, year)
+    
 
 def main():
     user_name = get_name()
