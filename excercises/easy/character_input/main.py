@@ -3,13 +3,13 @@
 
 from datetime import date
 
+
 def get_name():
     while True:
         user_name = input("Type in your first name: ")
         if user_name:
             return user_name.strip()
         
-
 def get_age():
     while True:
         user_age = input("Type in your age: ")
@@ -17,7 +17,6 @@ def get_age():
         if user_age.strip():
             return user_age.strip()
         
-
 def get_celebrate():
      while True:
         celebrated = input("Have you celebrated birthday this year?\nY/N: ")
@@ -25,8 +24,6 @@ def get_celebrate():
             if celebrated.upper() == "N" or celebrated.upper() == "Y":
                 return celebrated
             
-
-
 def calculate_year(user_age):
     current_year = date.today().year
     birth_year = current_year - int(user_age)
@@ -36,7 +33,7 @@ def calculate_year(user_age):
     return year_hundred
 
 def print_result(name, year):
-    print(f"Dear {name}, year {year} will be the year you turn 100.")*5
+    print(f"Dear {name}, year {year} will be the year you turn 100.")
 
 def main():
     user_name = get_name()
